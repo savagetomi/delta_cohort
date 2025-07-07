@@ -1,6 +1,6 @@
-accountNumber = []
+lastbal = []
 pin = 1234
-accountBalance = 6000
+accountBalance = 0
 
 while True:
     register = int(input("Welcome to Naija Simple ATM,\n1. Register:\n"))
@@ -20,17 +20,21 @@ while True:
             if dashhy == 1:
                 option = int(input("Welcome to Naija Simple ATM,\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Transfer\n5. Buy Data\n6. Exit\n "))
                 if option == 1:
-                    pininput = int(input("Please input your pin:\n "))
-                    if pininput == pin:
-                        print(f"Your account Balance is {accountBalance}")
-                        break
-                    else:
-                        print("Incorrect PIN")
+                        pininput = int(input("Please input your pin:\n "))
+                        if pininput == pin:
+                            print(f"Your account Balance is {accountBalance}")
+                            break
+                        else:
+                            print("Incorrect PIN")
                 elif option == 2 :
                     amountdepo = int(input("Please input the amount you want to Deposit: "))
                     # slicing --------- print(amount[1:])
-                    totalBalance = accountBalance + amountdepo
-                    print(f"Your Deposit of {amountdepo} was successful and your new account Balance is {totalBalance}")
+                    if amountdepo <= 100:
+                        print("Invalid Amount, Minimum deposit is NGN100")
+                    else:
+                        accountBalance += amountdepo
+                        lastbal.append(accountBalance)
+                        print(f"Your Deposit of {amountdepo} was successful and your new account Balance is {accountBalance}")
                 elif option == 3 :
                     amountwithdraw = int(input("How much are you willing to Withdraw\n1. 1000\n2. 2000\n3. 5000\n4. 10000\n5. 20000\n6. 50000\n Input Custom Amount: "))
                     if amountwithdraw == 1:
