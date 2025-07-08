@@ -16,14 +16,13 @@ while True:
         else:
             regname = input("Please Input your Name:\n")
             print(f"Registration is complete, Your Account Number is {regnu} and Account Name is {regname}")
-            dashhy = int(input("Press 1 to proceed to make Transactions:\n "))
-            if dashhy == 1:
+    while True:
                 option = int(input("Welcome to Naija Simple ATM,\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Transfer\n5. Buy Data\n6. Exit\n "))
                 if option == 1:
                         pininput = int(input("Please input your pin:\n "))
                         if pininput == pin:
                             print(f"Your account Balance is {accountBalance}")
-                            break
+
                         else:
                             print("Incorrect PIN")
                 elif option == 2 :
@@ -48,7 +47,6 @@ while True:
                                 pininput1 = int(input("You're about to withdraw 1000,Input your pin to complete transaction: "))
                                 if pininput1 == pin:
                                     print(f"You have successfully withdrawn the sum of NGN 1000, Your available Balance is {withdrawbalance1}")
-                                    break
                                 else:
                                     print("Incorrect PIN")
                     elif amountwithdraw == 2:
@@ -62,7 +60,7 @@ while True:
                                 pininput2 = int(input("You're about to withdraw 2000,Input your pin to complete transaction: "))
                                 if pininput2 == pin:
                                     print(f"You have successfully withdrawn the sum of NGN 1000, Your available Balance is {withdrawbalance2}")
-                                    break
+                                    
                                 else:
                                     print("Incorrect PIN")
                     elif amountwithdraw == 3:
@@ -76,7 +74,7 @@ while True:
                                 pininput3 = int(input("You're about to withdraw 5000,Input your pin to complete transaction: "))
                                 if pininput3 == pin:
                                     print(f"You have successfully withdrawn the sum of NGN 5000, Your available Balance is {withdrawbalance3}")
-                                    break
+                                    
                                 else:
                                     print("Incorrect PIN")
                     elif amountwithdraw == 4:
@@ -87,7 +85,7 @@ while True:
                             pininput4 = int(input("You're about to withdraw 50000,Input your pin to complete transaction: "))
                             if pininput4 == pin:
                                 print(f"You have successfully withdrawn the sum of NGN 10000, Your available Balance is {withdrawbalance4}")
-                                break
+                                
                             else:
                                 print("Incorrect PIN")
                     elif amountwithdraw == 5:
@@ -98,7 +96,7 @@ while True:
                             pininput5 = int(input("You're about to withdraw 20000,Input your pin to complete transaction: "))
                             if pininput5 == pin:
                                 print(f"You have successfully withdrawn the sum of NGN 20000, Your available Balance is {withdrawbalance5}")
-                                break
+                               
                             else:
                                 print("Incorrect PIN")
                     elif amountwithdraw == 6:
@@ -109,7 +107,7 @@ while True:
                             pininput6 = int(input("You're about to withdraw 50000,Input your pin to complete transaction: "))
                             if pininput6 == pin :
                                 print(f"You have successfully withdrawn the sum of NGN 50000, Your available Balance is {withdrawbalance6}")
-                                break
+                                
                             else:
                                 print("Incorrect PIN")
                     elif amountwithdraw > 100:
@@ -120,7 +118,7 @@ while True:
                             pininput7 = int(input(f"You're about to withdraw {amountwithdraw},Input your pin to complete transaction: "))
                             if pininput7 == pin:
                                 print(f"You have successfully withdrawn the sum of NGN {amountwithdraw}, Your available Balance is {withdrawbalance7}")
-                                break
+                                
                             else:
                                 print("Incorrect PIN")
                     else:
@@ -208,7 +206,7 @@ while True:
                                 pinn = int(input(f"You're about to recharge {amounttt} to {phonenumber} MTN.\nInput your PIN: "))
                                 if pinn == pin:
                                     print("Successful")
-                                    break
+                                    
                                 else:
                                     print("Incorrect Pin")
                         elif network_provider == 2:
@@ -219,7 +217,7 @@ while True:
                                 pinn = int(input(f"You're about to send {amounttt} to {phonenumber} Airtel.\nInput your PIN: "))
                                 if pinn == pin:
                                     print("Successful")
-                                    break
+                                
                                 else:
                                     print("Incorrect Pin") 
                         elif bank_name == 3:
@@ -230,7 +228,7 @@ while True:
                                 pinn = int(input(f"You're about to send {amounttt} to {phonenumber} Glo.\nInput your PIN: "))
                                 if pinn == pin:
                                     print("Successful")
-                                    break
+                                    
                                 else:
                                     print("Incorrect Pin")
                         elif bank_name == 4 :
@@ -241,7 +239,7 @@ while True:
                                 pinn = int(input(f"You're about to send {amounttt} to {phonenumber} 9Mobile.\nInput your PIN: "))
                                 if pinn == pin:
                                     print("Successful")
-                                    break
+                                    
                                 else:
                                     print("Incorrect Pin")
                         elif bank_name == 5:
@@ -252,7 +250,7 @@ while True:
                                 pinn = int(input(f"You're about to send {amounttt} to {phonenumber} Starcomms.\nInput your PIN: "))
                                 if pinn == pin:
                                     print("Successful")
-                                    break
+                                    
                                 else:
                                     print("Incorrect Pin")
                         else:
@@ -260,5 +258,3 @@ while True:
                 elif option == 6  :
                     print("Thanks for using our Service")
                     break
-            else: 
-                print("Goodbye.")
